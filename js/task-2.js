@@ -26,7 +26,7 @@ const images = [
     alt: 'Lighthouse Coast Sea',
   },
 ];
-
+const fragment = document.createDocumentFragment();
 images.forEach(image => {
   const listItem = document.createElement('li');
   const imgElement = document.createElement('img');
@@ -34,5 +34,6 @@ images.forEach(image => {
   imgElement.alt = image.alt;
   imgElement.width = 240;
   listItem.appendChild(imgElement);
-  list.appendChild(listItem);
+  fragment.appendChild(listItem);
 });
+list.appendChild(fragment);
